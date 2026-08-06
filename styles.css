@@ -113,6 +113,13 @@ button:focus-visible {
   color: var(--orange-deep);
 }
 
+.hero-app-name {
+  margin: 0.45rem 0 0;
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
 h1,
 h2 {
   line-height: 1.2;
@@ -255,6 +262,16 @@ h2 {
   padding: 0.6rem 0.8rem;
 }
 
+.journey-flow li::before {
+  content: "";
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin: 0 auto 0.4rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-deep) 100%);
+}
+
 .journey-flow li:not(:last-child)::after {
   content: "↓";
   display: block;
@@ -281,17 +298,18 @@ h2 {
   place-items: center;
 }
 
-.phone-mockup p {
-  margin: 0;
-  color: var(--orange-deep);
-  font-weight: 800;
-  letter-spacing: 0.2em;
+.app-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  box-shadow: 0 10px 22px rgba(185, 86, 9, 0.2);
 }
 
 .shots-grid {
   margin-top: 1rem;
   display: grid;
   gap: 0.85rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .shot-card {
@@ -324,6 +342,7 @@ h2 {
   font-weight: 700;
   color: var(--ink-soft);
   text-align: center;
+  font-size: 0.96rem;
 }
 
 .site-footer {
@@ -395,7 +414,7 @@ h2 {
   }
 
   .shots-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .card {
@@ -403,9 +422,15 @@ h2 {
   }
 
   .footer-inner {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
     justify-content: space-between;
     gap: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .shots-grid {
+    grid-template-columns: 1fr;
   }
 }
 

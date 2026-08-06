@@ -78,6 +78,20 @@ button:focus-visible {
   gap: 1rem;
 }
 
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand-icon {
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 auto;
+  border-radius: 0.55rem;
+  box-shadow: 0 6px 14px rgba(185, 86, 9, 0.18);
+}
+
 .brand {
   margin: 0;
   font-size: 1.4rem;
@@ -285,24 +299,20 @@ h2 {
   place-items: center;
 }
 
-.phone-mockup {
-  width: min(260px, 78%);
-  aspect-ratio: 10 / 20;
+.hero-visual-card {
+  width: 100%;
+  max-width: 540px;
   border-radius: 28px;
-  border: 3px solid #f3cd9e;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(243, 164, 95, 0.45), transparent 45%),
-    linear-gradient(165deg, #fffdf9, #ffefd4);
+  overflow: hidden;
+  border: 1px solid #f0d3ae;
   box-shadow: var(--shadow-soft);
-  display: grid;
-  place-items: center;
+  background: #fff7eb;
 }
 
-.app-icon {
-  width: 88px;
-  height: 88px;
-  border-radius: 20px;
-  box-shadow: 0 10px 22px rgba(185, 86, 9, 0.2);
+.hero-visual-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .shots-grid {
@@ -321,20 +331,12 @@ h2 {
   padding: 0.85rem;
 }
 
-.shot-placeholder {
+.shot-image {
   width: 100%;
   aspect-ratio: 9 / 18;
   border-radius: 14px;
-  border: 2px dashed #efb777;
-  background:
-    linear-gradient(180deg, rgba(243, 164, 95, 0.25), rgba(243, 164, 95, 0.08)),
-    repeating-linear-gradient(
-      -45deg,
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5) 12px,
-      rgba(255, 245, 227, 0.85) 12px,
-      rgba(255, 245, 227, 0.85) 24px
-    );
+  object-fit: cover;
+  background: #fff5e4;
 }
 
 .shot-card figcaption {
@@ -389,6 +391,10 @@ h2 {
   .hero-grid {
     grid-template-columns: 1.15fr 0.85fr;
     align-items: center;
+  }
+
+  .hero-visual-card {
+    max-width: none;
   }
 
   .cta-row {
